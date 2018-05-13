@@ -201,7 +201,7 @@
             // btnAnnuler
             // 
             this.btnAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAnnuler.Location = new System.Drawing.Point(502, 327);
+            this.btnAnnuler.Location = new System.Drawing.Point(512, 327);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(77, 24);

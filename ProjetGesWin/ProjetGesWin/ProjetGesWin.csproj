@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="exceptionsPersonnalisees.cs" />
     <Compile Include="frmClientParent.cs">
       <SubType>Form</SubType>
     </Compile>

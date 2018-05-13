@@ -74,6 +74,7 @@ namespace ProjetGesWin
                 // recherche rang du contact saisi
                 this.iContact = MCommercial.NContacts - 1;
             }
+            this.Close();
         }
 
         /// <summary>
@@ -89,7 +90,18 @@ namespace ProjetGesWin
             txtBoxAd2.Text = leClient.AdresseClient2;
             txtBoxCp.Text = leClient.CodePostal;
             txtBoxVil.Text = leClient.Ville;
-            txtBoxTel.Text = leClient.TelephoneClient.ToString();
+            try
+            {
+                txtBoxTel.Text = leClient.TelephoneClient.ToString();
+            }
+            catch (TelephoneInvalide)
+            {
+                if (!(txtBoxTel.Text.Length == 10))
+                {
+                    MessageBox.Show("Vous devez rentrer dix chiffres, pas plus, pas moins.");
+                }
+            }
+           
             chkBoxPv2.Checked = leClient.ClientPrive;
             txtBoxEff.Text = leClient.Effectif.ToString();
             txtBoxCa.Text = leClient.ChiffreAffaires.ToString();
@@ -109,7 +121,6 @@ namespace ProjetGesWin
             dataContact.Columns.Add(new DataColumn("Nom", typeof(System.String)));
             dataContact.Columns.Add(new DataColumn("Prenom", typeof(System.String)));
             dataContact.Columns.Add(new DataColumn("Telephone", typeof(System.Int32)));
-
             dataContact.Columns.Add(new DataColumn("Email", typeof(System.String)));
             dataContact.Columns.Add(new DataColumn("Fonction", typeof(System.String)));
             // boucle de remplissage de la DataTable à partir de la collection

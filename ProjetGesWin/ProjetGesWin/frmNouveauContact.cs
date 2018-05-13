@@ -27,6 +27,7 @@ namespace ProjetGesWin
         {
             this.txtClient.Text = this.leClient.NumClient.ToString();
             this.txtActivite.Text = this.leClient.RaisonSociale;
+            this.cbxFonction.Items.Add("Comptable");
         }
 
 
@@ -45,7 +46,7 @@ namespace ProjetGesWin
             nouveauContact.Email = this.txtEmail.Text;
 
             // affecter la propriété  13/05 9h05 : on va voir si ça marche 
-            nouveauContact.Fonction = this.cbxFonction.SelectedText;
+            nouveauContact.Fonction = this.cbxFonction.Text;
 
 
             // ajouter la référence d'objets MCommercial dans la collection
@@ -56,8 +57,8 @@ namespace ProjetGesWin
             // fermeture de la boite de dialogue par validation
             //this.DialogResult = DialogResult.OK;
             frmConsultationClient nouveauCommercial = new frmConsultationClient(leClient);
-            nouveauCommercial.Show();
             nouveauCommercial.afficheContact();
+            nouveauCommercial.Show();
             this.Close();
         }
 
