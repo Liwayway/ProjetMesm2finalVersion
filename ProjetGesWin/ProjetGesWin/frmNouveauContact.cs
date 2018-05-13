@@ -16,7 +16,7 @@ namespace ProjetGesWin
     public partial class frmNouveauContact : Form
     {
         private MClients leClient;
-        
+
         public frmNouveauContact(MClients client)
         {
             InitializeComponent();
@@ -34,6 +34,29 @@ namespace ProjetGesWin
         private void btnOK_Click(object sender, EventArgs e)
         {
             
+            TextBox[] newTextBox = { txtNom, txtPrenom, txtEmail};
+            for (int inti = 0; inti < newTextBox.Length; inti++)
+            {
+                if (newTextBox[inti].Text == string.Empty )
+                {
+                   MessageBox.Show("Cette information doit être renseignée");
+                    newTextBox[inti].BackColor = Color.Red;
+                   newTextBox[inti].Focus();
+                   return;
+                }
+            }
+
+            if (cbxFonction.Text == String.Empty)
+            {
+                MessageBox.Show("Cette information doit être renseignée");
+                cbxFonction.BackColor = Color.Red;
+                cbxFonction.Focus();
+                return;
+            }
+
+
+           
+
             //Ajout Nouveau Contact
             MCommercial nouveauContact = new MCommercial();
             nouveauContact.NumClient = this.leClient.NumClient;
@@ -62,7 +85,9 @@ namespace ProjetGesWin
                 this.cbxFonction.Items.Add(this.cbxFonction.Text);
                 
               }
-            
+
+           
+
 
 
 
@@ -138,5 +163,14 @@ namespace ProjetGesWin
              
              
         }
+
+        /* Créer une fonction verifiant la saisie des champs
+        protected Boolean validateForm(data) {
+            if (DataBindings["CP"] == Null) return false;
+
+            if (...)
+
+        }
+        */
     }
 }

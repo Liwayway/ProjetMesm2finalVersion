@@ -94,7 +94,7 @@ namespace ProjetGesWin
                     }
                     else
                     {
-                        telephoneContact = value; // tout est bon, on affecte la propriété
+                        telephoneContact = value.ToString() ; // tout est bon, on affecte la propriété
                     }
 
                 }

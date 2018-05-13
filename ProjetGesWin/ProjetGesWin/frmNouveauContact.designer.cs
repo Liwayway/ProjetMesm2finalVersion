@@ -150,6 +150,7 @@
             // 
             // txtNom
             // 
+            this.txtNom.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtNom.Location = new System.Drawing.Point(94, 27);
             this.txtNom.Margin = new System.Windows.Forms.Padding(2);
             this.txtNom.Name = "txtNom";
@@ -222,6 +223,7 @@
             // 
             // txtActivite
             // 
+            this.txtActivite.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtActivite.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtActivite.Location = new System.Drawing.Point(159, 15);
             this.txtActivite.Name = "txtActivite";

@@ -40,6 +40,7 @@ namespace ProjetGesWin
 
         }
 
+
         public static object getClientById(int id)
         {
             return Donnees.arrayClients[id];
