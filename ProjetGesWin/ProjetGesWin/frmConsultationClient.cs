@@ -47,6 +47,7 @@ namespace ProjetGesWin
         private void frmConsultationClient_Load(object sender, EventArgs e)
         {
             this.afficheClient(this.leClient);
+            chkBoxPv2.Enabled = false;
         }
 
 
