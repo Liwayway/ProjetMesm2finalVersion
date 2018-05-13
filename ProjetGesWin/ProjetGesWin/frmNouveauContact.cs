@@ -55,15 +55,17 @@ namespace ProjetGesWin
             // incrémentation du compteur de contacts
             MCommercial.NContacts += 1;
             // ajouter à la combobox pour la prochaine fois si la valeur saisie est différente d'un choix de la combobox
+            //Attention : Doublon dans le dropdown de la combobox
             
              if (!(this.cbxFonction.Items.Contains(this.cbxFonction.Text)))
              {
                 this.cbxFonction.Items.Add(this.cbxFonction.Text);
                 
-              } 
-             
-             
-           
+              }
+            
+
+
+
             frmConsultationClient nouveauCommercial = new frmConsultationClient(leClient);
             nouveauCommercial.afficheContact();
             nouveauCommercial.Show();
@@ -130,7 +132,7 @@ namespace ProjetGesWin
                 
                             // ... alors l'ajouter à la combo...
                         this.cbxFonction.Items.Add(this.cbxFonction.Text);
-                        // et activer le bouton AjouteTout
+                        
                        
              }
              

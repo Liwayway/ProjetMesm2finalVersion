@@ -47,6 +47,11 @@
             // 
             this.txtBoxNv.TextChanged += new System.EventHandler(this.txtBoxNv_TextChanged);
             // 
+            // cbBoxAct
+            // 
+            this.cbBoxAct.DropDown += new System.EventHandler(this.cbBoxAct_DropDown);
+            this.cbBoxAct.SelectedIndexChanged += new System.EventHandler(this.cbBoxAct_SelectedIndexChanged);
+            // 
             // btnOK
             // 
             this.btnOK.Location = new System.Drawing.Point(430, 473);

@@ -146,6 +146,7 @@
             this.txtActivite.ReadOnly = true;
             this.txtActivite.Size = new System.Drawing.Size(121, 20);
             this.txtActivite.TabIndex = 9;
+            this.txtActivite.TextChanged += new System.EventHandler(this.txtActivite_TextChanged);
             // 
             // txtNature
             // 

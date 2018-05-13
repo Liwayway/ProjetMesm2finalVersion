@@ -106,10 +106,10 @@ namespace ProjetGesWin
             txtBoxEff.Text = leClient.Effectif.ToString();
             txtBoxCa.Text = leClient.ChiffreAffaires.ToString();
             //Gné, là ce sont des combobox à modifier
-            txtActivite.Text = leClient.Activite;
-            
-            txtNature.Text = leClient.Nature;
 
+            txtActivite.Text = leClient.Activite;
+            txtNature.Text = leClient.Nature;
+           
         }
 
 
@@ -160,6 +160,11 @@ namespace ProjetGesWin
         {
             frmModifierClient clientAModifier = new frmModifierClient();
             clientAModifier.Show();
+
+        }
+
+        private void txtActivite_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

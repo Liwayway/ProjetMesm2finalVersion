@@ -40,19 +40,34 @@ namespace ProjetGesWin
             nouveauClient.ClientPrive = base.chkBoxPv2.Checked;
             nouveauClient.Effectif = Int32.Parse(base.txtBoxEff.Text.Trim());
             nouveauClient.ChiffreAffaires = Int32.Parse(base.txtBoxCa.Text.Trim());
+            nouveauClient.Activite = base.cbBoxAct.Text;
+            nouveauClient.Nature = base.cbBoxNat.Text.ToString();
+
+            //Je ne sais pas comment faire pour les combobox
+
+
+           if (!(base.cbBoxAct.Items.Contains(base.cbBoxAct.Text)))
+            {
+               base.cbBoxAct.Items.Add(base.cbBoxAct.Text);
+
+             }
+
+           if (!(base.cbBoxNat.Items.Contains(base.cbBoxNat.Text)))
+           {
+               base.cbBoxNat.Items.Add(base.cbBoxNat.Text);
+
+           }
+            
 
             //Numéro du client, qui le définit ?
             // Est ce que le numéro client = rang du client +1 (pour pas avoir de client zéro) ?
 
             nouveauClient.IClient++;
 
-            /*Je ne sais pas comment faire pour les combobox
-             * Concernant nouveauClient.Activite et nouveauClient.Nature
-            */
+           
 
-            
-             //ajouter la référence d'objet MClients dans la collection
-                Donnees.arrayClients.Add(nouveauClient);
+            //ajouter la référence d'objet MClients dans la collection
+            Donnees.arrayClients.Add(nouveauClient);
             // incrémentation compteur de clients
                 MClients.NClients++;
             
@@ -104,6 +119,25 @@ namespace ProjetGesWin
             }   
 
     
+        }
+
+        private void cbBoxAct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbBoxAct_DropDown(object sender, EventArgs e)
+        {
+            // si l'élément saisi en Text n'existe pas déjà dans la combo...
+            if (!(base.cbBoxAct.Items.Contains(base.cbBoxAct.Text)))
+            {
+
+                // ... alors l'ajouter à la combo...
+               base.cbBoxAct.Items.Add(base.cbBoxAct.Text);
+               
+
+            }
+
         }
     }
 }
