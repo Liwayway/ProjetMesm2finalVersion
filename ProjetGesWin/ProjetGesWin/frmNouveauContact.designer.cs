@@ -174,6 +174,7 @@
             this.cbxFonction.Name = "cbxFonction";
             this.cbxFonction.Size = new System.Drawing.Size(213, 21);
             this.cbxFonction.TabIndex = 1;
+            this.cbxFonction.DropDown += new System.EventHandler(this.cbxFonction_DropDown);
             this.cbxFonction.SelectedIndexChanged += new System.EventHandler(this.cbxFonction_SelectedIndexChanged);
             // 
             // lblFonction

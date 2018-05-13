@@ -44,8 +44,8 @@ namespace ProjetGesWin
             //Controle de la saisie de l'email
             nouveauContact.Email = this.txtEmail.Text;
 
-            // affecter la propriété  nouveauContact.Fonction = 
-
+            // affecter la propriété  13/05 9h05 : on va voir si ça marche 
+            nouveauContact.Fonction = this.cbxFonction.SelectedText;
 
 
             // ajouter la référence d'objets MCommercial dans la collection
@@ -108,6 +108,22 @@ namespace ProjetGesWin
         private void cbxFonction_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbxFonction_DropDown(object sender, EventArgs e)
+        {
+            
+             // si l'élément saisi en Text n'existe pas déjà dans la combo...
+            if (!(this.cbxFonction.Items.Contains(this.cbxFonction.Text)))
+            {
+                
+                            // ... alors l'ajouter à la combo...
+                        this.cbxFonction.Items.Add(this.cbxFonction.Text);
+                        // et activer le bouton AjouteTout
+                       
+             }
+             
+             
         }
     }
 }
