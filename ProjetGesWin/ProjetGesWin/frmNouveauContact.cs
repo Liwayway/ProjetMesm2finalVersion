@@ -54,12 +54,22 @@ namespace ProjetGesWin
             Donnees.arrayCommercial.Add(nouveauContact);
             // incrémentation du compteur de contacts
             MCommercial.NContacts += 1;
-            // fermeture de la boite de dialogue par validation
-            //this.DialogResult = DialogResult.OK;
+            // ajouter à la combobox pour la prochaine fois si la valeur saisie est différente d'un choix de la combobox
+            
+             if (!(this.cbxFonction.Items.Contains(this.cbxFonction.Text)))
+             {
+                this.cbxFonction.Items.Add(this.cbxFonction.Text);
+                
+              } 
+             
+             
+           
             frmConsultationClient nouveauCommercial = new frmConsultationClient(leClient);
             nouveauCommercial.afficheContact();
             nouveauCommercial.Show();
-            this.Close();
+            // fermeture de la boite de dialogue par validation
+            this.DialogResult = DialogResult.OK;
+            //this.Close();
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)

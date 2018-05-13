@@ -77,7 +77,7 @@ namespace ProjetGesWin
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
         }
 
         private void txtBoxNv_TextChanged(object sender, EventArgs e)
